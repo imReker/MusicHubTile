@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resources">
+      <UniqueIdentifier>5fd0e509-b6ae-4f29-bd2a-4d2cc10f3aa0</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{dd2aa0ce-dbe1-4381-aab4-797f16fbacc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{3e46ea86-3962-40dc-b73a-526e41037d0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headers\ZMedia">
+      <UniqueIdentifier>{2e40ae99-98fc-4253-b711-487b2b968fa7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="PE.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Verify.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Shell.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ZMedia.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NTFunction.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="PE.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Verify.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="winternl.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Shell.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMedia.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMedia\ZMediaQueueClient.h">
+      <Filter>Headers\ZMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="ZMedia\ZMediaLibClient.h">
+      <Filter>Headers\ZMedia</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

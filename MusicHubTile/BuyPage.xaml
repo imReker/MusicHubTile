@@ -1,0 +1,102 @@
+﻿<phone:PhoneApplicationPage x:Class="Reker.MusicHubTile.BuyPage"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+		xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+		FontFamily="{StaticResource PhoneFontFamilyNormal}"
+		FontSize="{StaticResource PhoneFontSizeNormal}"
+		Foreground="{StaticResource PhoneForegroundBrush}" SupportedOrientations="Portrait"
+		Orientation="Portrait" mc:Ignorable="d" shell:SystemTray.IsVisible="True">
+
+	<toolkit:TransitionService.NavigationInTransition>
+		<toolkit:NavigationInTransition>
+			<toolkit:NavigationInTransition.Backward>
+				<toolkit:TurnstileTransition Mode="BackwardIn" />
+			</toolkit:NavigationInTransition.Backward>
+			<toolkit:NavigationInTransition.Forward>
+				<toolkit:TurnstileTransition Mode="ForwardIn" />
+			</toolkit:NavigationInTransition.Forward>
+		</toolkit:NavigationInTransition>
+	</toolkit:TransitionService.NavigationInTransition>
+	<toolkit:TransitionService.NavigationOutTransition>
+		<toolkit:NavigationOutTransition>
+			<toolkit:NavigationOutTransition.Backward>
+				<toolkit:TurnstileTransition Mode="BackwardOut" />
+			</toolkit:NavigationOutTransition.Backward>
+			<toolkit:NavigationOutTransition.Forward>
+				<toolkit:TurnstileTransition Mode="ForwardOut" />
+			</toolkit:NavigationOutTransition.Forward>
+		</toolkit:NavigationOutTransition>
+	</toolkit:TransitionService.NavigationOutTransition>
+
+	<!--LayoutRoot 是包含所有页面内容的根网格-->
+	<Grid x:Name="LayoutRoot" Background="Transparent"
+			toolkit:TiltEffect.IsTiltEnabled="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!--TitlePanel 包含应用程序的名称和页标题-->
+		<StackPanel Grid.Row="0" Margin="12,17,0,28">
+			<TextBlock
+					Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+					Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" />
+			<TextBlock x:Name="tbTitle"
+					Text="{Binding Path=LocalizedResources.BuyPageTitle, Source={StaticResource LocalizedStrings}}"
+					Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
+		</StackPanel>
+
+		<!--ContentPanel - 在此处放置其他内容-->
+		<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			<StackPanel Orientation="Vertical" x:Name="stkBuy" Grid.Row="0" Margin="12,0,0,0">
+				<TextBlock
+						Text="{Binding Path=LocalizedResources.BuyPageBuyDescription, Source={StaticResource LocalizedStrings}}"
+						HorizontalAlignment="Left" FontSize="{StaticResource PhoneFontSizeMedium}"
+						TextWrapping="Wrap" Margin="0,0,0,10" />
+				<Button x:Name="btnBuy"
+						Content="{Binding Path=LocalizedResources.BuyPageBtnBuy, Source={StaticResource LocalizedStrings}}"
+						Click="btnBuy_Click" Height="98" Width="249" HorizontalAlignment="Left" />
+			</StackPanel>
+			<ScrollViewer Grid.Row="1" Margin="12,0,0,0">
+				<StackPanel Orientation="Vertical" x:Name="stkDonate">
+					<TextBlock
+							Text="{Binding Path=LocalizedResources.BuyPageDonateDescription, Source={StaticResource LocalizedStrings}}"
+							HorizontalAlignment="Left" FontSize="{StaticResource PhoneFontSizeMedium}"
+							TextWrapping="Wrap" Margin="0,0,0,10" />
+					<Button x:Name="btnDonate1"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left" />
+					<Button x:Name="btnDonate2"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left" />
+					<Button x:Name="btnDonate5"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left" />
+					<Button x:Name="btnDonate20"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left" />
+					<Button x:Name="btnDonate50"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left" />
+					<Button x:Name="btnDonate200"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left"
+							Hold="btnDonate200_Hold" />
+					<Button x:Name="btnDonate500"
+							Content="{Binding Path=LocalizedResources.BuyPageBtnDonate, Source={StaticResource LocalizedStrings}}"
+							Click="btnDonate_Click" Height="98" Width="249" HorizontalAlignment="Left"
+							Visibility="Collapsed" />
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+	</Grid>
+
+</phone:PhoneApplicationPage>

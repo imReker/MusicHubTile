@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicHubTile", "MusicHubTile\MusicHubTile.csproj", "{92966E2E-43A9-4902-BC08-FB07DF4A437F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RTHelper", "rkHelperRT\rkHelperRT.vcxproj", "{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Phone.Controls.Toolkit.WP8", "PhoneToolkit\Microsoft.Phone.Controls.Toolkit.WP8\Microsoft.Phone.Controls.Toolkit.WP8.csproj", "{486642F0-AB94-4F28-B49C-106CA3134239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TileUpdateTask", "TileUpdateTask\TileUpdateTask.csproj", "{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|Win32 = Debug|Win32
+		Release|ARM = Release|ARM
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Debug|ARM.ActiveCfg = Debug|ARM
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Debug|ARM.Build.0 = Debug|ARM
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Debug|ARM.Deploy.0 = Debug|ARM
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Debug|Win32.ActiveCfg = Debug|x86
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Debug|Win32.Build.0 = Debug|x86
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Debug|Win32.Deploy.0 = Debug|x86
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Release|ARM.ActiveCfg = Release|ARM
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Release|ARM.Build.0 = Release|ARM
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Release|ARM.Deploy.0 = Release|ARM
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Release|Win32.ActiveCfg = Release|x86
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Release|Win32.Build.0 = Release|x86
+		{92966E2E-43A9-4902-BC08-FB07DF4A437F}.Release|Win32.Deploy.0 = Release|x86
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Debug|ARM.ActiveCfg = Debug|ARM
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Debug|ARM.Build.0 = Debug|ARM
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Debug|Win32.ActiveCfg = Debug|Win32
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Debug|Win32.Build.0 = Debug|Win32
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Release|ARM.ActiveCfg = Release|ARM
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Release|ARM.Build.0 = Release|ARM
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Release|Win32.ActiveCfg = Release|Win32
+		{43DB1E42-20C7-4E51-983D-7BDDDEA62B83}.Release|Win32.Build.0 = Release|Win32
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Debug|ARM.ActiveCfg = Debug|ARM
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Debug|ARM.Build.0 = Debug|ARM
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Debug|Win32.ActiveCfg = Debug|x86
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Debug|Win32.Build.0 = Debug|x86
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Release|ARM.ActiveCfg = Release|ARM
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Release|ARM.Build.0 = Release|ARM
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Release|Win32.ActiveCfg = Release|x86
+		{486642F0-AB94-4F28-B49C-106CA3134239}.Release|Win32.Build.0 = Release|x86
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Debug|ARM.ActiveCfg = Debug|ARM
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Debug|ARM.Build.0 = Debug|ARM
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Debug|Win32.ActiveCfg = Debug|x86
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Debug|Win32.Build.0 = Debug|x86
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Release|ARM.ActiveCfg = Release|ARM
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Release|ARM.Build.0 = Release|ARM
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Release|Win32.ActiveCfg = Release|x86
+		{5765D13E-D1FF-4CEB-AA5E-F703E2E77D06}.Release|Win32.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

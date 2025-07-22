@@ -1,0 +1,142 @@
+﻿<phone:PhoneApplicationPage x:Class="Reker.MusicHubTile.AboutPage"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+		xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+		FontFamily="{StaticResource PhoneFontFamilyNormal}"
+		FontSize="{StaticResource PhoneFontSizeNormal}"
+		Foreground="{StaticResource PhoneForegroundBrush}" SupportedOrientations="Portrait"
+		Orientation="Portrait" toolkit:TiltEffect.IsTiltEnabled="True" mc:Ignorable="d"
+		shell:SystemTray.IsVisible="True">
+
+	<toolkit:TransitionService.NavigationInTransition>
+		<toolkit:NavigationInTransition>
+			<toolkit:NavigationInTransition.Backward>
+				<toolkit:TurnstileTransition Mode="BackwardIn" />
+			</toolkit:NavigationInTransition.Backward>
+			<toolkit:NavigationInTransition.Forward>
+				<toolkit:TurnstileTransition Mode="ForwardIn" />
+			</toolkit:NavigationInTransition.Forward>
+		</toolkit:NavigationInTransition>
+	</toolkit:TransitionService.NavigationInTransition>
+	<toolkit:TransitionService.NavigationOutTransition>
+		<toolkit:NavigationOutTransition>
+			<toolkit:NavigationOutTransition.Backward>
+				<toolkit:TurnstileTransition Mode="BackwardOut" />
+			</toolkit:NavigationOutTransition.Backward>
+			<toolkit:NavigationOutTransition.Forward>
+				<toolkit:TurnstileTransition Mode="ForwardOut" />
+			</toolkit:NavigationOutTransition.Forward>
+		</toolkit:NavigationOutTransition>
+	</toolkit:TransitionService.NavigationOutTransition>
+	
+	<phone:PhoneApplicationPage.Resources>
+		<ResourceDictionary>
+			<Style TargetType="HyperlinkButton">
+				<Setter Property="Template">
+					<Setter.Value>
+						<ControlTemplate TargetType="HyperlinkButton">
+							<ContentPresenter Content="{TemplateBinding Content}" />
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Style>
+		</ResourceDictionary>
+	</phone:PhoneApplicationPage.Resources>
+
+	<Grid x:Name="LayoutRoot" Background="Transparent"
+			toolkit:TiltEffect.IsTiltEnabled="True">
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="*" />
+		</Grid.RowDefinitions>
+
+		<!--TitlePanel 包含应用程序的名称和页标题-->
+		<StackPanel Grid.Row="0" Margin="12,17,0,28">
+			<TextBlock
+					Text="{Binding Path=LocalizedResources.ApplicationTitle, Source={StaticResource LocalizedStrings}}"
+					Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" />
+			<TextBlock x:Name="tbTitle"
+					Text="{Binding Path=LocalizedResources.AboutPageTitle, Source={StaticResource LocalizedStrings}}"
+					Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" />
+		</StackPanel>
+
+		<!--ContentPanel - 在此处放置其他内容-->
+		<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
+			<StackPanel>
+
+				<TextBlock x:Name="txtVersion" Text="Version" TextWrapping="Wrap"
+						Foreground="{StaticResource PhoneAccentBrush}"
+						FontSize="{StaticResource PhoneFontSizeLarge}" />
+
+				<ScrollViewer VerticalScrollBarVisibility="Disabled"
+						d:LayoutOverrides="GridBox">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="Auto" />
+							<RowDefinition Height="72" />
+						</Grid.RowDefinitions>
+
+						<StackPanel Margin="0,20,0,0" VerticalAlignment="Top"
+								d:LayoutOverrides="Width, Height">
+
+							<TextBlock FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+									Text="{Binding Path=LocalizedResources.AboutPageBy,
+                                                                       Source={StaticResource LocalizedStrings}}" Margin="0,20,0,0" />
+							<HyperlinkButton x:Name="btnHomePage" HorizontalAlignment="Left"
+									Margin="20,0,0,0" Click="btnHomePage_Click">
+								<TextBlock FontSize="{StaticResource PhoneFontSizeMedium}"
+										Text="{Binding Path=LocalizedResources.AboutPageBtnHomePage, Source={StaticResource LocalizedStrings}}"
+										TextDecorations="Underline" />
+							</HyperlinkButton>
+
+							<TextBlock FontSize="{StaticResource PhoneFontSizeMediumLarge}"
+									Text="{Binding Path=LocalizedResources.AboutPageThanks,
+                                                                       Source={StaticResource LocalizedStrings}}" Margin="0,20,0,0" />
+
+							<HyperlinkButton HorizontalAlignment="Left" Margin="20,0,0,5"
+									Click="HyperlinkButton1_Click">
+								<TextBlock Foreground="Gray"
+										FontSize="{StaticResource PhoneFontSizeMedium}"
+										Text="{Binding Path=LocalizedResources.AboutPageThanksMarcioAndrade, Source={StaticResource LocalizedStrings}}"
+										TextDecorations="Underline" />
+							</HyperlinkButton>
+
+							<HyperlinkButton HorizontalAlignment="Left" Margin="20,0,0,5"
+									Click="HyperlinkButton2_Click">
+								<TextBlock Foreground="Gray"
+										FontSize="{StaticResource PhoneFontSizeMedium}"
+										Text="{Binding Path=LocalizedResources.AboutPageThanksMartinAnderson, Source={StaticResource LocalizedStrings}}"
+										TextDecorations="Underline" />
+							</HyperlinkButton>
+
+							<Grid Margin="0,30,0,0">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="*" />
+									<ColumnDefinition Width="*" />
+								</Grid.ColumnDefinitions>
+								<Button Grid.Column="0" x:Name="btnRate"
+										Content="{Binding Path=LocalizedResources.AboutPageBtnRate,
+                                                              Source={StaticResource LocalizedStrings}}" Click="btnRate_Click" />
+
+								<Button Grid.Column="1" x:Name="btnMore"
+										Content="{Binding Path=LocalizedResources.AboutPageBtnMore,
+                                                              Source={StaticResource LocalizedStrings}}" Click="btnMore_Click" />
+							</Grid>
+						</StackPanel>
+
+					</Grid>
+				</ScrollViewer>
+
+			</StackPanel>
+
+		</Grid>
+	</Grid>
+
+</phone:PhoneApplicationPage>

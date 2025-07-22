@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
+  <Identity Name="44172reker123.39961D2748F44" Publisher="CN=0D3E5CCC-D25D-48E6-B112-8364F1268F8C" Version="1.1.11.0" />
+  <mp:PhoneIdentity PhoneProductId="3faa2f9e-6b8d-440a-bb60-5dd76a5baec1" PhonePublisherId="1be89e62-28e8-44ff-a72d-305f51f83d0f" />
+  <Properties>
+    <DisplayName>Music Hub Tile</DisplayName>
+    <PublisherDisplayName>reker</PublisherDisplayName>
+    <Logo>Assets\ApplicationIcon.png</Logo>
+  </Properties>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Prerequisites>
+    <OSMinVersion>6.3.1</OSMinVersion>
+    <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="musicLibrary" />
+  </Capabilities>
+  <Applications>
+    <Application Id="MusicHubTile" Executable="AGHost.exe" EntryPoint="MainPage.xaml">
+      <m3:VisualElements DisplayName="Music Hub Tile" Description="Bring Music Hub back to WP8.1" ForegroundText="light" BackgroundColor="#00BFFF" Square150x150Logo="Assets\Tiles\MusicTile-medium.png" Square44x44Logo="Assets\ApplicationIcon.png" ToastCapable="false">
+        <m3:DefaultTile ShortName="Music Hub Tile" DefaultSize="square150x150Logo" Square71x71Logo="Assets\Tiles\MusicTile-small.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\Splash.png" BackgroundColor="#0b7c0f" />
+        <m3:ApplicationView MinWidth="width320" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
+      </m3:VisualElements>
+      <Extensions>
+        <Extension Category="windows.backgroundTasks" EntryPoint="Reker.MusicHubTile.TileUpdateTask.UpdateTask">
+          <BackgroundTasks>
+            <Task Type="systemEvent" />
+          </BackgroundTasks>
+        </Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+</Package>
